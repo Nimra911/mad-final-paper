@@ -13,10 +13,10 @@ class AddEditPage extends StatefulWidget{
   _AddEditPageState createState() => _AddEditPageState();
 }
 class _AddEditPageState extends State<AddEditPage> {
-  late TextEditingController name;
-  late TextEditingController email;
-  late TextEditingController phone;
-  late TextEditingController address;
+   TextEditingController name;
+   TextEditingController email;
+  TextEditingController phone;
+  TextEditingController address;
 
   bool editMode = false;
 
