@@ -11,10 +11,10 @@ class mysplashscreen extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 5,
+      seconds: 15,
       navigateAfterSeconds: new welcome(),
       title: new Text(
-        "Nimra Rehman",
+        "Nimra Rehman(fa17-bcs-072)",
         style: new TextStyle(
           fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.white,),
       ),

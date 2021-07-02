@@ -1,9 +1,14 @@
 import 'package:contactus/contactus.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz_app/welcome.dart';
-import 'main.dart';
-class contactus extends StatelessWidget {
 
+import 'main.dart';
+import 'my_flutter_app_icons.dart';
+
+
+
+
+class contactus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const kPrimaryGradient = LinearGradient(
@@ -15,86 +20,80 @@ class contactus extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.purple,
           title: Text("Contact Us"),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.home,
-                color: Colors.white,
-              ),
-              onPressed: () {
-                // do something
-              },
-            )
-          ],
+          actions: [IconButton(icon: Icon(MyFlutterApp.home), onPressed: (){
+            Navigator.push(context,MaterialPageRoute(builder: (context)=>welcome()));
+
+          })],
         ),
         drawer: Theme(
           data: Theme.of(context).copyWith( //This will change the drawer background to blue.
-            canvasColor: Colors.blueGrey.shade700,
+            canvasColor: Colors.purple,
           ),
           child: Drawer(
               child: ListView(
                 children: [
-                  UserAccountsDrawerHeader(
-                    accountName: Text("           Nimra Rehman", style: TextStyle(
-                        fontSize: 25.0,
-                        fontWeight:FontWeight.bold
-                    ),),
-                    accountEmail: Text("          FA17-BCS-072", style: TextStyle(
-                        fontSize: 25.0,
-                        fontWeight:FontWeight.bold
-                    ),),
-                    decoration: BoxDecoration(
-                      gradient: new LinearGradient(
-                          colors: [
-                            Colors.blueGrey.shade700,
-                            Colors.blueGrey.shade700,
-                          ],
-
-                          stops: [0.0, 1.0],
-                         ),
-                    ),
-
+                  SizedBox(
+                    width: 250,
+                    height: 40,
                   ),
                   ListTile(
                     title: Container(
 
-                      child: Text('Welcome',style: Theme.of(context)
+                      child: Text(
+                        'Nimra Rehman',
+                        style: TextStyle(
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic,
+                            color:Colors.white
+                        ),
+                      ),
+                    ),
+                    onTap: (){
+
+
+                    },
+                  ),
+                  Divider(
+                    height:30,
+                    thickness: 20,
+                    color: Colors.white,
+                  ),
+                  ListTile(
+                    title: Container(
+
+                      child: Text('Welcome screen',style: Theme.of(context)
                           .textTheme
                           .button
-                          .copyWith(color: Colors.black, fontSize: 20.0),
+                          .copyWith(color: Colors.black45, fontSize: 20.0),
 
                       ),
                     ),
                     onTap: (){
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder:  (context) => welcome()),
+                        MaterialPageRoute(builder: (context) => welcome()),
                       );
 
                     },
                   ),
-                  SizedBox(
-                    width: 2.0,
-                    height: 2.0,
-                    child: const DecoratedBox(
-                      decoration: const BoxDecoration(
-                        gradient: kPrimaryGradient,
-                      ),
-                    ),
+                  Divider(
+                    height:30,
+                    thickness: 20,
+                    color: Colors.white,
                   ),
 
 
                   ListTile(
                     title: Container(
 
-                      child: Text('Contact Us',style: Theme.of(context)
+                      child: Text('Contact Us plz..',style: Theme.of(context)
                           .textTheme
                           .button
-                          .copyWith(color: Colors.white, fontSize: 20.0),
+                          .copyWith(color: Colors.black45, fontSize: 20.0),
 
                       ),
                     ),
@@ -106,14 +105,18 @@ class contactus extends StatelessWidget {
 
                     },
                   ),
-
+                  Divider(
+                    height:30,
+                    thickness: 20,
+                    color: Colors.white,
+                  ),
                   ListTile(
                     title: Container(
 
                       child: Text('Exit',style: Theme.of(context)
                           .textTheme
                           .button
-                          .copyWith(color: Colors.white, fontSize: 20.0),
+                          .copyWith(color: Colors.black45, fontSize: 20.0),
 
                       ),
                     ),
@@ -125,7 +128,11 @@ class contactus extends StatelessWidget {
 
                     },
                   ),
-
+                  Divider(
+                    height:30,
+                    thickness: 20,
+                    color: Colors.white,
+                  ),
                 ],
               )
           ),
@@ -137,21 +144,40 @@ class contactus extends StatelessWidget {
           ),
           child: ContactUs(
 
-            email: 'nimrarehmanvehari@gmail.com',
-
-            phoneNumber: '0000000000',
+            email: 'NimraRehman@gmail.com',
+            companyName: 'Rehman laj',
+            phoneNumber: '*****',
             githubUserName: 'Nimra911',
-
+            linkedinURL: '*****************',
+            tagLine: 'Flutter Developer',
+            twitterHandle: '*******',
+            instagram: '*********',
           ),
         ),
         bottomNavigationBar: ContactUsBottomAppBar(
 
-
+          companyName: 'Nimra Rehman',
           textColor: Colors.white,
-          backgroundColor: Colors.blueGrey.shade700,
-          email: 'nimrarehmanvehari@gmail.com',
+          backgroundColor: Colors.purple,
+          email: 'nimrarehman@gmail.com',
         ),
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

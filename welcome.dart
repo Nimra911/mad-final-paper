@@ -33,68 +33,70 @@ class welcome extends StatelessWidget {
         ),
         drawer: Theme(
           data: Theme.of(context).copyWith( //This will change the drawer background to blue.
-            canvasColor: Colors.blue.shade700,
+            canvasColor: Colors.purple,
           ),
           child: Drawer(
               child: ListView(
                 children: [
-                  UserAccountsDrawerHeader(
-                    accountName: Text("           Nimra Rehman", style: TextStyle(
-                        fontSize: 25.0,
-                        fontWeight:FontWeight.bold
-                    ),),
-                    accountEmail: Text("          FA17-BCS-072", style: TextStyle(
-                        fontSize: 25.0,
-                        fontWeight:FontWeight.bold
-                    ),),
-                    decoration: BoxDecoration(
-                      gradient: new LinearGradient(
-                        colors: [
-                          Colors.blueGrey.shade700,
-                          Colors.blueGrey.shade700,
-                        ],
-
-                        stops: [0.0, 1.0],
-                      ),
-                    ),
-
+                  SizedBox(
+                    width: 250,
+                    height: 40,
                   ),
                   ListTile(
                     title: Container(
 
-                      child: Text('Welcome',style: Theme.of(context)
+                      child: Text(
+                        'Nimra Rehman',
+                        style: TextStyle(
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic,
+                            color:Colors.white
+                        ),
+                      ),
+                    ),
+                    onTap: (){
+
+
+                    },
+                  ),
+                  Divider(
+                    height:30,
+                    thickness: 20,
+                    color: Colors.white,
+                  ),
+                  ListTile(
+                    title: Container(
+
+                      child: Text('Welcome screen',style: Theme.of(context)
                           .textTheme
                           .button
-                          .copyWith(color: Colors.white, fontSize: 20.0),
+                          .copyWith(color: Colors.black45, fontSize: 20.0),
 
                       ),
                     ),
                     onTap: (){
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder:  (context) => welcome()),
+                        MaterialPageRoute(builder: (context) => welcome()),
                       );
 
                     },
                   ),
-                  SizedBox(
-                    width: 2.0,
-                    height: 2.0,
-                    child: const DecoratedBox(
-                      decoration: const BoxDecoration(
-                        gradient: kPrimaryGradient,
-                      ),
-                    ),
+                  Divider(
+                    height:30,
+                    thickness: 20,
+                    color: Colors.white,
                   ),
 
 
                   ListTile(
                     title: Container(
 
-                      child: Text('Contact Us',style: Theme.of(context)
+                      child: Text('Contact Us plz..',style: Theme.of(context)
                           .textTheme
                           .button
-                          .copyWith(color: Colors.white, fontSize: 20.0),
+                          .copyWith(color: Colors.black45, fontSize: 20.0),
 
                       ),
                     ),
@@ -106,23 +108,18 @@ class welcome extends StatelessWidget {
 
                     },
                   ),
-                  SizedBox(
-                    width: 2.0,
-                    height: 2.0,
-                    child: const DecoratedBox(
-                      decoration: const BoxDecoration(
-                        gradient: kPrimaryGradient,
-                      ),
-                    ),
+                  Divider(
+                    height:30,
+                    thickness: 20,
+                    color: Colors.white,
                   ),
-
                   ListTile(
                     title: Container(
 
                       child: Text('Exit',style: Theme.of(context)
                           .textTheme
                           .button
-                          .copyWith(color: Colors.white, fontSize: 20.0),
+                          .copyWith(color: Colors.black45, fontSize: 20.0),
 
                       ),
                     ),
@@ -134,7 +131,11 @@ class welcome extends StatelessWidget {
 
                     },
                   ),
-
+                  Divider(
+                    height:30,
+                    thickness: 20,
+                    color: Colors.white,
+                  ),
                 ],
               )
           ),
