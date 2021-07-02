@@ -1,7 +1,7 @@
 import 'package:contactus/contactus.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz_app/welcome.dart';
-
+import 'splashscreen.dart';
 import 'main.dart';
 import 'my_flutter_app_icons.dart';
 

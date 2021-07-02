@@ -2,6 +2,7 @@ import 'contactus.dart';
 import 'package:flutter/material.dart';
 import 'package:quiz_app/welcome.dart';
 import 'main.dart';
+import 'splashscreen.dart';
 class welcome extends StatelessWidget {
 
   @override
