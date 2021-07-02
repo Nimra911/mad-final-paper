@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     trailing: GestureDetector(child: Icon(Icons.delete),
                       onTap: (){
                         setState(() {
-                          var url=Uri.parse('http://192.168.8.104/phpmysql/delete.php');
+                          var url=Uri.parse('http://192.168.1.8/php_mysql_crud/delete.php');
                           http.post(url,body: {
                             'id' : (list[index]['id']),
                           });
